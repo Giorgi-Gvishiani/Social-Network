@@ -1,0 +1,14 @@
+.mainInfo img {
+    width: 1100px;
+    height: 224px;
+}
+
+.mainInfo {
+    color: #47525E;
+    font-family: Lato;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 33px;
+    width: 489px;
+    text-align: left;
+}
