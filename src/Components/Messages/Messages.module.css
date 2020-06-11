@@ -1,0 +1,19 @@
+.Messages {
+    display: flex;
+}
+
+.mainContainer {
+    display: flex;
+}
+
+.dialogsElements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dialogsMessagesElements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

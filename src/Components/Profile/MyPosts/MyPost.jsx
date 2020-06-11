@@ -1,10 +1,10 @@
 import React from "react";
-import Posts from "../Posts";
+import Posts from "./Posts/Posts";
 import s from './MyPost.module.css';
 
 const MyPost = (props) => {
 
-    let postsElements = props.posts.map(e => <Posts id={e.id} likeCount={e.likeCount} postText={e.postText}/>)
+    let postsElements = props.posts.map(e => <Posts id={e.id} likeCount={e.likeCount} postText={e.postText} key={e.id}/>)
 
     let addPost = () => {
         props.addPost()

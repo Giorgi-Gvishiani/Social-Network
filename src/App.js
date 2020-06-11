@@ -4,7 +4,7 @@ import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import {Route} from "react-router-dom";
 import Profile from "./Components/Profile/Profile";
-import Messages from "./Components/Messages/Messages";
+import {MessagesContainer} from "./Components/Messages/MessagesContainer";
 
 function App() {
     return (
@@ -16,7 +16,7 @@ function App() {
                 </div>
                 <div className='dynamicBlock'>
                     <Route path='/Profile' render={() => <Profile/>}/>
-                    <Route path='/Messages' render={() => <Messages/>}/>
+                    <Route path='/Messages' render={() => <MessagesContainer/>}/>
                 </div>
             </div>
         </div>
