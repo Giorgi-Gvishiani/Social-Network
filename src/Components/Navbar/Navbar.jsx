@@ -8,6 +8,7 @@ const Navbar = (props) => {
             <nav className={s.refBlock}>
                 <NavLink className={s.item} to={'/Profile'}>Profile</NavLink>
                 <NavLink className={s.item} to={'/Messages'}>Messages</NavLink>
+                <NavLink className={s.item} to={'/Users'}>Users</NavLink>
             </nav>
         </div>
     )
