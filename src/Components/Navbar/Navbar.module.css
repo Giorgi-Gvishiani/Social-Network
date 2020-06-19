@@ -14,6 +14,7 @@
     margin-bottom: .2em;
     color: #fff;
     transition: color .1s linear;
+    cursor: pointer;
 }
 
 .item:hover {
@@ -24,5 +25,4 @@
 .navbar a {
     text-decoration: none;
     font-size: 2em;
-    cursor: pointer;
 }
