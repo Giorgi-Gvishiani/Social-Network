@@ -22,3 +22,7 @@ nav a.active {
     font-weight: bold;
     font-style: italic;
 }
+
+button {
+    cursor: pointer;
+}

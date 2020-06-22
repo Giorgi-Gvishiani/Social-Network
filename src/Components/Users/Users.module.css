@@ -18,7 +18,7 @@
 .border {
     background-color: #FFFFFF;
     border: 2px solid #C0CCDA;
-    border-radius: 10px;
+    border-radius: .8em;
     width: 599px;
     height: 91px;
 }
@@ -41,7 +41,6 @@
 
 .name {
     color: #8190A5;
-    font-family: Lato;
     font-size: 21px;
     line-height: 36px;
     width: 152px;
@@ -50,9 +49,13 @@
 
 .status {
     color: #8190A5;
-    font-family: Lato;
     font-size: 18px;
     line-height: 30px;
     width: 585px;
     text-align: left;
+}
+
+.selectedPage {
+    font-weight: bold;
+    cursor: pointer;
 }
