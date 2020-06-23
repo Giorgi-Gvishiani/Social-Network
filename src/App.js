@@ -5,7 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import {Route} from "react-router-dom";
 import Profile from "./Components/Profile/Profile";
 import {MessagesContainer} from "./Components/Messages/MessagesContainer";
-import {UsersContainer} from "./Components/Users/usersContainer";
+import UsersContainer from "./Components/Users/usersContainer";
 
 function App() {
     return (

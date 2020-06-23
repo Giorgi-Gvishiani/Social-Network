@@ -1,32 +1,13 @@
 import React from "react";
 import s from './Users.module.css'
 import defaultPhoto from './img/user.png'
-import * as axios from "axios";
 
 
-class Users extends React.Component {
-
-    componentDidMount() {
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
-                this.props.SetUsers(response.data.items);
-                this.props.SetTotalUsersCount(response.data.totalCount);
-            }
-        )
-    }
-
-    onPageChanged = (pageNumber) => {
-        this.props.SetCurrentPage(pageNumber);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`)
-            .then(response => {
-                this.props.SetUsers(response.data.items);
-            });
-    }
-
-    render() {
+let  Users = (props) => {
 
         let pages = [];
 
-        let pagesCount = Math.ceil(this.props.totalUsersCount / this.props.pageSize)
+        let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
 
         for (let i = 1; i <= pagesCount; i++) {
             pages.push(i);
@@ -35,23 +16,22 @@ class Users extends React.Component {
         return <div>
             <div>
                 {pages.map(p => {
-                        return <span className={this.props.currentPage === p && s.selectedPage}
-                                     onClick={() => {this.onPageChanged(p)}}> {p} </span>
-                    }
+                        return <span className={props.currentPage === p && s.selectedPage}
+                                     onClick={() => {props.onPageChanged(p)}}> {p} </span>}
                 )}
             </div>
             {
-                this.props.users.map(u => <div className={s.mainContainer}>
+                props.users.map(u => <div className={s.mainContainer}>
                         {/*<img src={u.photos.small !=null ? u.photos.small : defaultPhoto} className={s.userPhoto} alt="avatar"/>*/}
                         <div className={s.nameAndBlock}>
                             <img src={defaultPhoto} alt="avatar" className={s.userPhoto}/>
                             <div>
                                 {
                                     u.followed
-                                        ? <button className={s.btn} onClick={() => this.props.Unfollow(u.id)}>
+                                        ? <button className={s.btn} onClick={() => props.Unfollow(u.id)}>
                                             <div className={s.btnText}>Unfollow</div>
                                         </button>
-                                        : <button className={s.btn} onClick={() => this.props.Follow(u.id)}>
+                                        : <button className={s.btn} onClick={() => props.Follow(u.id)}>
                                             <div className={s.btnText}>Follow</div>
                                         </button>
                                 }
@@ -70,7 +50,6 @@ class Users extends React.Component {
                 )
             }
         </div>
-    }
 }
 
 export default Users;
