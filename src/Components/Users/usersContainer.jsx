@@ -7,10 +7,10 @@ import {
     toggleIsFetching,
     unfollow
 } from "../Redux/Reducers/usersReducer";
-import Users from "./Users";
 import React from "react";
 import * as axios from "axios";
 import Preloader from "../../common/Preloader/Preloader";
+import Users from "./Users";
 
 
 class UsersContainer extends React.Component {
@@ -36,16 +36,27 @@ class UsersContainer extends React.Component {
     }
 
     render() {
-        return <>
-            {this.props.isFetching ? <Preloader/> : null}
-            <Users users={this.props.users}
-                   pageSize={this.props.pageSize}
-                   totalUsersCount={this.props.totalUsersCount}
-                   currentPage={this.props.currentPage}
-                   onPageChanged={this.onPageChanged}
-                   Follow={this.props.follow}
-                   Unfollow={this.props.unfollow}/>
-        </>
+        if (this.props.isFetching) {
+            return (<Preloader/>)
+        } else {
+            return (<Users users={this.props.users}
+                           pageSize={this.props.pageSize}
+                           totalUsersCount={this.props.totalUsersCount}
+                           currentPage={this.props.currentPage}
+                           onPageChanged={this.onPageChanged}
+                           Follow={this.props.follow}
+                           Unfollow={this.props.unfollow}/>)
+        }
+        // return <>
+        //     {/*{this.props.isFetching ? <Preloader/> : null}*/}
+        //     <Users users={this.props.users}
+        //            pageSize={this.props.pageSize}
+        //            totalUsersCount={this.props.totalUsersCount}
+        //            currentPage={this.props.currentPage}
+        //            onPageChanged={this.onPageChanged}
+        //            Follow={this.props.follow}
+        //            Unfollow={this.props.unfollow}/>
+        // </>
     }
 }
 

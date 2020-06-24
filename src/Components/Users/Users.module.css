@@ -57,5 +57,6 @@
 
 .selectedPage {
     font-weight: bold;
-    cursor: pointer;
+    font-style: italic;
+    font-size: 1.2em;
 }
