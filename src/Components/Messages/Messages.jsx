@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import Dialogs from "./Dialogs/Dialogs";
 import DialogsMessages from "./DialogsMessages/DialogsMessages";
-import s from './Messages.module.css'
+import s from "./Messages.module.css";
 
 const Messages = (props) => {
     let dialogsElements = props.DialogsData.map(d => <Dialogs id={d.id} name={d.name} key={d.id}/>);

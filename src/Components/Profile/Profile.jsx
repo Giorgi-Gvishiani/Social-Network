@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import ProfileInfo from "./MyPosts/profileInfo/profileInfo";
 import {MyPostContainer} from "./MyPosts/MyPostContainer";
 

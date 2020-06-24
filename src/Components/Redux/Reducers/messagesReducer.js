@@ -42,11 +42,11 @@ const messagesReducer = (state = initialState, action) => {
 
 }
 
-export const updateMessageTextAC = (newMessageText) => {
+export const updateMessageText = (newMessageText) => {
     return {type: UPDATE_MESSAGE_TEXT, newMessageText}
 }
 
-export const sendMessageAC = () => {
+export const sendMessage = () => {
     return {type: SEND_MESSAGE}
 }
 

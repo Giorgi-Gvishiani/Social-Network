@@ -1,5 +1,5 @@
-import React from 'react';
-import loader from '../Preloader/Preloader.svg'
+import React from "react";
+import loader from "../Preloader/Preloader.svg";
 
 const Preloader =(props) => {
     return (<div>

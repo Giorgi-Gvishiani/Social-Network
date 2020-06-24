@@ -1,6 +1,6 @@
-import React from 'react';
-import s from './Users.module.css'
-import defaultPhoto from './img/user.png'
+import React from "react";
+import s from "./Users.module.css";
+import defaultPhoto from "./img/user.png";
 
 
 let Users = (props) => {
