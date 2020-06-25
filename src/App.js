@@ -16,7 +16,7 @@ function App() {
                     <Navbar/>
                 </div>
                 <div className='dynamicBlock'>
-                    <Route path='/Profile' render={() => <ProfileContainer/>}/>
+                    <Route path='/Profile/:userId?' render={() => <ProfileContainer/>}/>
                     <Route path='/Messages' render={() => <MessagesContainer/>}/>
                     <Route path='/Users' render={() => <UsersContainer/>}/>
                 </div>

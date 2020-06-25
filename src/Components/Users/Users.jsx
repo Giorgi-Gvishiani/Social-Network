@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Users.module.css";
-import defaultPhoto from "./img/user.png";
+import defaultPhoto from "../../common/img/user.png";
 import {NavLink} from "react-router-dom";
 
 
