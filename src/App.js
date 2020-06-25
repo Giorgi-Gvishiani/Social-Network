@@ -1,16 +1,16 @@
 import React from "react";
 import "./App.css";
-import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import {Route} from "react-router-dom";
 import {MessagesContainer} from "./Components/Messages/MessagesContainer";
 import UsersContainer from "./Components/Users/usersContainer";
 import ProfileContainer from "./Components/Profile/ProfileContainer";
+import HeaderContainer from "./Components/Header/HeaderContainer";
 
 function App() {
     return (
         <div className="appContainer">
-            <Header/>
+            <HeaderContainer/>
             <div className="mainBlocks">
                 <div className="staticBlock">
                     <Navbar/>

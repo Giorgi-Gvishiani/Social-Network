@@ -7,3 +7,7 @@
     height: 4em;
     padding: .2em 0 .2em 1em;
 }
+
+.isLogin {
+    float: right;
+}
