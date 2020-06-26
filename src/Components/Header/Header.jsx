@@ -8,7 +8,7 @@ const Header = (props) => {
             <img className='HeaderImg' src="https://marvel-live.freetls.fastly.net/canvas/2018/11/6ffaa98a51d44357ad91edb25fc8349c?quality=95&fake=.png" alt="icon"/>
 
             <div className='isLogin'>
-                {props.isAuth ? props.login : <NavLink to='/login'>Login</NavLink>}
+                {props.isAuth ? props.login : <NavLink to='/login'>sign in</NavLink>}
             </div>
         </div>
     )

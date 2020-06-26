@@ -11,16 +11,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         updateMessageText: (newMessageText) => {
-//             dispatch(updateMessageTextAC(newMessageText))
-//         },
-//         sendMessage: () => {
-//             dispatch(sendMessageAC())
-//         }
-//     }
-// }
-
-
 export let MessagesContainer = connect(mapStateToProps, {sendMessage, updateMessageText})(Messages)
