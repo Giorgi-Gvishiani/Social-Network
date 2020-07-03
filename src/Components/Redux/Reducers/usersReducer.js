@@ -1,3 +1,5 @@
+import {UsersAPI} from "../../../api/api";
+
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
@@ -73,11 +75,24 @@ export const setCurrentPage = (currentPage) => {
 }
 
 export const setTotalUsersCount = (totalUsersCount) => {
-    return {type: SET_TOTAL_USERS_COUNT,  count: totalUsersCount}
+    return {type: SET_TOTAL_USERS_COUNT, count: totalUsersCount}
 }
 
 export const toggleIsFetching = (isFetching) => {
     return {type: TOGGLE_IS_FETCHING, isFetching}
+}
+
+export const getUsers = (currentPage, pageSize) => {
+    return (dispatch) => {
+        dispatch(toggleIsFetching(true));
+        dispatch(setCurrentPage(currentPage));
+        UsersAPI.getUsers(currentPage, pageSize).then(data => {
+                dispatch(toggleIsFetching(false));
+                dispatch(setUsers(data.items));
+                dispatch(setTotalUsersCount(data.totalCount));
+            }
+        )
+    }
 }
 
 
