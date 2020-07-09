@@ -2,6 +2,7 @@ import React from "react";
 import s from "./profileInfo.module.css";
 import Preloader from "../../../../common/Preloader/Preloader";
 import defaultPhoto from "../../../../common/img/user.png";
+import ProfileStatus from "./profileStatus";
 
 const ProfileInfo = (props) => {
 
@@ -10,14 +11,11 @@ const ProfileInfo = (props) => {
     } else {
         return (
             <div className={s.mainContainer}>
-                <img className={s.largePhoto}
-                    src="https://marvel-live.freetls.fastly.net/canvas/2018/11/926b68b39ac147cbab4adb5ec89b307b?quality=95&fake=.png"
-                    alt="Photo"/>
                 <div>
-                    <img src={props.profile.photos.large !=null ? props.profile.photos.large : defaultPhoto } className={s.avatarPhoto} alt="avatar"/>
+                    <img src={props.profile.photos.large != null ? props.profile.photos.large : defaultPhoto}
+                         className={s.avatarPhoto} alt="avatar"/>
                     <div>{props.profile.fullName}</div>
-                    <div>Date of birth :</div>
-                    <div>City :</div>
+                    <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
                 </div>
             </div>
         )

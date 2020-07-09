@@ -12,16 +12,4 @@ let mapStateToProps = (state) => {
     }
 }
 
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         updatePostText: (text) => {
-//             dispatch(updateNewPostTextAC(text))
-//         },
-//         addPost: () => {
-//             dispatch(addPostAC())
-//         }
-//     }
-// }
-
-
-export let MyPostContainer = connect(mapStateToProps, {updateNewPostText, addPost })(MyPost);
+export let MyPostContainer = connect(mapStateToProps, {updateNewPostText, addPost})(MyPost);
