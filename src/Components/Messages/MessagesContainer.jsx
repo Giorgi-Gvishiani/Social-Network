@@ -1,7 +1,7 @@
 import React from "react";
 import Messages from "./Messages";
 import {connect} from "react-redux";
-import {sendMessage, updateMessageText} from "../Redux/Reducers/messagesReducer";
+import {sendMessage} from "../Redux/Reducers/messagesReducer";
 
 const mapStateToProps = (state) => {
     return {
@@ -11,4 +11,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export let MessagesContainer = connect(mapStateToProps, {sendMessage, updateMessageText})(Messages)
+export let MessagesContainer = connect(mapStateToProps, {sendMessage})(Messages)

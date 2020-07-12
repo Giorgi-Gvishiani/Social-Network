@@ -11,26 +11,22 @@ let initialState = {
         {id: 2, likeCount: 13, postText: 'Hi, it\'s my second post'},
         {id: 3, likeCount: 27, postText: 'Hi, it\'s my third post'},
     ],
-
-    newPostText: '',
-
     profile: null,
     status: ''
 }
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case UPDATE_NEW_POST_TEXT:
-            return {
-                ...state,
-                newPostText: action.newText
-            }
 
         case ADD_POST :
             let newPost = {
                 id: 4,
                 likeCount: 0,
-                postText: state.newPostText
+                postText: action.newPostText
+            }
+            return {
+                ...state,
+                posts: [...state.posts, newPost]
             }
         case SET_USERS_PROFILE :
             return {
@@ -49,12 +45,8 @@ const profileReducer = (state = initialState, action) => {
 
 // ACTION CREATORS
 
-export const updateNewPostText = (text) => {
-    return {type: UPDATE_NEW_POST_TEXT, newText: text}
-}
-
-export const addPost = () => {
-    return {type: ADD_POST}
+export const addPost = (newPostText) => {
+    return {type: ADD_POST, newPostText}
 }
 
 export const setUsersProfile = (profile) => {

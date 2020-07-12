@@ -2,10 +2,6 @@
     display: flex;
 }
 
-.mainContainer {
-    display: flex;
-}
-
 .dialogsElements {
     display: flex;
     flex-direction: column;
