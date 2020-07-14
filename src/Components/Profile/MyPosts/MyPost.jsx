@@ -9,7 +9,6 @@ const MyPost = (props) => {
 
 
  const addNewPost = (formData) => {
-        //console.log(formData)
      props.addPost(formData.profileForm)
  }
 

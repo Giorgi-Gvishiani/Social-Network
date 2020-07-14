@@ -1,13 +1,3 @@
-.textArea {
-    background-color: #E6EEEA;
-    width: 1004px;
-    height: 84px;
-    resize: none;
-    border: none;
-    border-radius: .3em;
-    margin: 1em 0;
-}
-
 .mainContainer {
     margin: 1.5em 0 0;
 }

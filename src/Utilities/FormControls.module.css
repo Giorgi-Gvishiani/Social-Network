@@ -1,0 +1,13 @@
+.formControl {
+    border-radius: .3em;
+}
+
+.error {
+    border: 3px red solid;
+    border-radius: .3em;
+
+}
+
+.textError {
+    color: red;
+}
