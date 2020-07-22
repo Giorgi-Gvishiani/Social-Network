@@ -1,5 +1,6 @@
 .formControl {
     border-radius: .3em;
+    border: solid black;
 }
 
 .error {
